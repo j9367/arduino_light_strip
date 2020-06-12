@@ -444,6 +444,8 @@ if(request.indexOf("/Rainbow") != -1)
   client.println("<a href=\"/Rainbow\"\"><button>Rainbow</button></a><br />");
    
   client.println("<a href=\"/pattern2\"\"><button>Pattern 2</button></a><br />");
+	
+  client.prinln('<input type="range" min="1" max="100" value="50" class="slider" id="slider">');
     
   client.println("</html>");
 
