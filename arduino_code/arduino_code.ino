@@ -10,7 +10,7 @@
 // NeoPixel brightness, 0 (min) to 255 (max)
 #define BRIGHTNESS 50
 
-// Declare our NeoPixel strip object:
+// Declare our NeoPixel strip objects
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 #include <ESP8266WiFi.h>
