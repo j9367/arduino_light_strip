@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D6AC420249982F300BCB484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC41F249982F300BCB484 /* AppDelegate.swift */; };
+		7D6AC422249982F300BCB484 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC421249982F300BCB484 /* ViewController.swift */; };
+		7D6AC425249982F300BCB484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6AC423249982F300BCB484 /* Main.storyboard */; };
+		7D6AC428249982F300BCB484 /* Light_control.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC426249982F300BCB484 /* Light_control.xcdatamodeld */; };
+		7D6AC42A249982F300BCB484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D6AC429249982F300BCB484 /* Assets.xcassets */; };
+		7D6AC42D249982F300BCB484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6AC42B249982F300BCB484 /* LaunchScreen.storyboard */; };
+		7D6AC438249982F300BCB484 /* Light_controlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC437249982F300BCB484 /* Light_controlTests.swift */; };
+		7D6AC443249982F300BCB484 /* Light_controlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC442249982F300BCB484 /* Light_controlUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D6AC434249982F300BCB484 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D6AC414249982F300BCB484 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D6AC41B249982F300BCB484;
+			remoteInfo = "Light control";
+		};
+		7D6AC43F249982F300BCB484 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D6AC414249982F300BCB484 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D6AC41B249982F300BCB484;
+			remoteInfo = "Light control";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D6AC41C249982F300BCB484 /* Light control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D6AC41F249982F300BCB484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D6AC421249982F300BCB484 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D6AC424249982F300BCB484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D6AC427249982F300BCB484 /* Light_control.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Light_control.xcdatamodel; sourceTree = "<group>"; };
+		7D6AC429249982F300BCB484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D6AC42C249982F300BCB484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D6AC42E249982F300BCB484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D6AC433249982F300BCB484 /* Light controlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Light controlTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D6AC437249982F300BCB484 /* Light_controlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light_controlTests.swift; sourceTree = "<group>"; };
+		7D6AC439249982F300BCB484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D6AC43E249982F300BCB484 /* Light controlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Light controlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D6AC442249982F300BCB484 /* Light_controlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light_controlUITests.swift; sourceTree = "<group>"; };
+		7D6AC444249982F400BCB484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D6AC419249982F300BCB484 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D6AC430249982F300BCB484 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D6AC43B249982F300BCB484 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D6AC413249982F300BCB484 = {
+			isa = PBXGroup;
+			children = (
+				7D6AC41E249982F300BCB484 /* Light control */,
+				7D6AC436249982F300BCB484 /* Light controlTests */,
+				7D6AC441249982F300BCB484 /* Light controlUITests */,
+				7D6AC41D249982F300BCB484 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D6AC41D249982F300BCB484 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D6AC41C249982F300BCB484 /* Light control.app */,
+				7D6AC433249982F300BCB484 /* Light controlTests.xctest */,
+				7D6AC43E249982F300BCB484 /* Light controlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D6AC41E249982F300BCB484 /* Light control */ = {
+			isa = PBXGroup;
+			children = (
+				7D6AC41F249982F300BCB484 /* AppDelegate.swift */,
+				7D6AC421249982F300BCB484 /* ViewController.swift */,
+				7D6AC423249982F300BCB484 /* Main.storyboard */,
+				7D6AC429249982F300BCB484 /* Assets.xcassets */,
+				7D6AC42B249982F300BCB484 /* LaunchScreen.storyboard */,
+				7D6AC42E249982F300BCB484 /* Info.plist */,
+				7D6AC426249982F300BCB484 /* Light_control.xcdatamodeld */,
+			);
+			path = "Light control";
+			sourceTree = "<group>";
+		};
+		7D6AC436249982F300BCB484 /* Light controlTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D6AC437249982F300BCB484 /* Light_controlTests.swift */,
+				7D6AC439249982F300BCB484 /* Info.plist */,
+			);
+			path = "Light controlTests";
+			sourceTree = "<group>";
+		};
+		7D6AC441249982F300BCB484 /* Light controlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D6AC442249982F300BCB484 /* Light_controlUITests.swift */,
+				7D6AC444249982F400BCB484 /* Info.plist */,
+			);
+			path = "Light controlUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D6AC41B249982F300BCB484 /* Light control */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D6AC447249982F400BCB484 /* Build configuration list for PBXNativeTarget "Light control" */;
+			buildPhases = (
+				7D6AC418249982F300BCB484 /* Sources */,
+				7D6AC419249982F300BCB484 /* Frameworks */,
+				7D6AC41A249982F300BCB484 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Light control";
+			productName = "Light control";
+			productReference = 7D6AC41C249982F300BCB484 /* Light control.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D6AC432249982F300BCB484 /* Light controlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D6AC44A249982F400BCB484 /* Build configuration list for PBXNativeTarget "Light controlTests" */;
+			buildPhases = (
+				7D6AC42F249982F300BCB484 /* Sources */,
+				7D6AC430249982F300BCB484 /* Frameworks */,
+				7D6AC431249982F300BCB484 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D6AC435249982F300BCB484 /* PBXTargetDependency */,
+			);
+			name = "Light controlTests";
+			productName = "Light controlTests";
+			productReference = 7D6AC433249982F300BCB484 /* Light controlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D6AC43D249982F300BCB484 /* Light controlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D6AC44D249982F400BCB484 /* Build configuration list for PBXNativeTarget "Light controlUITests" */;
+			buildPhases = (
+				7D6AC43A249982F300BCB484 /* Sources */,
+				7D6AC43B249982F300BCB484 /* Frameworks */,
+				7D6AC43C249982F300BCB484 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D6AC440249982F300BCB484 /* PBXTargetDependency */,
+			);
+			name = "Light controlUITests";
+			productName = "Light controlUITests";
+			productReference = 7D6AC43E249982F300BCB484 /* Light controlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D6AC414249982F300BCB484 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Vasilis Michalakis";
+				TargetAttributes = {
+					7D6AC41B249982F300BCB484 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					7D6AC432249982F300BCB484 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7D6AC41B249982F300BCB484;
+					};
+					7D6AC43D249982F300BCB484 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7D6AC41B249982F300BCB484;
+					};
+				};
+			};
+			buildConfigurationList = 7D6AC417249982F300BCB484 /* Build configuration list for PBXProject "Light control" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D6AC413249982F300BCB484;
+			productRefGroup = 7D6AC41D249982F300BCB484 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D6AC41B249982F300BCB484 /* Light control */,
+				7D6AC432249982F300BCB484 /* Light controlTests */,
+				7D6AC43D249982F300BCB484 /* Light controlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D6AC41A249982F300BCB484 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D6AC42D249982F300BCB484 /* LaunchScreen.storyboard in Resources */,
+				7D6AC42A249982F300BCB484 /* Assets.xcassets in Resources */,
+				7D6AC425249982F300BCB484 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D6AC431249982F300BCB484 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D6AC43C249982F300BCB484 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D6AC418249982F300BCB484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D6AC428249982F300BCB484 /* Light_control.xcdatamodeld in Sources */,
+				7D6AC422249982F300BCB484 /* ViewController.swift in Sources */,
+				7D6AC420249982F300BCB484 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D6AC42F249982F300BCB484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D6AC438249982F300BCB484 /* Light_controlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D6AC43A249982F300BCB484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D6AC443249982F300BCB484 /* Light_controlUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D6AC435249982F300BCB484 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D6AC41B249982F300BCB484 /* Light control */;
+			targetProxy = 7D6AC434249982F300BCB484 /* PBXContainerItemProxy */;
+		};
+		7D6AC440249982F300BCB484 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D6AC41B249982F300BCB484 /* Light control */;
+			targetProxy = 7D6AC43F249982F300BCB484 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D6AC423249982F300BCB484 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D6AC424249982F300BCB484 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D6AC42B249982F300BCB484 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D6AC42C249982F300BCB484 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D6AC445249982F400BCB484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D6AC446249982F400BCB484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D6AC448249982F400BCB484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J765624E4;
+				INFOPLIST_FILE = "Light control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "determined-man.Light-control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D6AC449249982F400BCB484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J765624E4;
+				INFOPLIST_FILE = "Light control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "determined-man.Light-control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D6AC44B249982F400BCB484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J765624E4;
+				INFOPLIST_FILE = "Light controlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "determined-man.Light-controlTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Light control.app/Light control";
+			};
+			name = Debug;
+		};
+		7D6AC44C249982F400BCB484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J765624E4;
+				INFOPLIST_FILE = "Light controlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "determined-man.Light-controlTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Light control.app/Light control";
+			};
+			name = Release;
+		};
+		7D6AC44E249982F400BCB484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J765624E4;
+				INFOPLIST_FILE = "Light controlUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "determined-man.Light-controlUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Light control";
+			};
+			name = Debug;
+		};
+		7D6AC44F249982F400BCB484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J765624E4;
+				INFOPLIST_FILE = "Light controlUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "determined-man.Light-controlUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Light control";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D6AC417249982F300BCB484 /* Build configuration list for PBXProject "Light control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D6AC445249982F400BCB484 /* Debug */,
+				7D6AC446249982F400BCB484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D6AC447249982F400BCB484 /* Build configuration list for PBXNativeTarget "Light control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D6AC448249982F400BCB484 /* Debug */,
+				7D6AC449249982F400BCB484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D6AC44A249982F400BCB484 /* Build configuration list for PBXNativeTarget "Light controlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D6AC44B249982F400BCB484 /* Debug */,
+				7D6AC44C249982F400BCB484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D6AC44D249982F400BCB484 /* Build configuration list for PBXNativeTarget "Light controlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D6AC44E249982F400BCB484 /* Debug */,
+				7D6AC44F249982F400BCB484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7D6AC426249982F300BCB484 /* Light_control.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7D6AC427249982F300BCB484 /* Light_control.xcdatamodel */,
+			);
+			currentVersion = 7D6AC427249982F300BCB484 /* Light_control.xcdatamodel */;
+			path = Light_control.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7D6AC414249982F300BCB484 /* Project object */;
+}
