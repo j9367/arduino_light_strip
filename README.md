@@ -6,6 +6,7 @@ This project currently contains all project files for the arduino
 This project requires the following libraries to function:
 
 ESP-WIFI.h
+
 adafruit Neo-Pixel
 
 
@@ -14,4 +15,5 @@ adafruit Neo-Pixel
 
 
 **© 2020 Jack Miller - All Rights Reserved**
+
 For security issues or questions, please contact [Jack Miller](https://www.startupwd.com/ "Contact Jack Miller via Startup Web Design")
