@@ -14,6 +14,6 @@ adafruit Neo-Pixel
 
 
 
-**© 2020 Jack Miller - All Rights Reserved**
+**© 2020 Jack Miller - All Rights Reserved** (ITF for Vasilis Michalakis and James Walters)
 
 For security issues or questions, please contact [Jack Miller](https://www.startupwd.com/ "Contact Jack Miller via Startup Web Design")
