@@ -28,6 +28,7 @@ class ViewController: UIViewController {
        Pattern1Button.layer.cornerRadius = 4
         OFF.layer.cornerRadius = 4
         // Do any additional setup after loading the view, typically from a nib.
+        //test
     }
 
     
