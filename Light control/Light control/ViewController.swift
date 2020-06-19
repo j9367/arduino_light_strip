@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     
     
     
+    @IBOutlet weak var Status: UILabel!
     
     
-    @IBOutlet weak var Pattern1Button: UIView!
+    @IBOutlet weak var Pattern1Button: UIButton!
     
     @IBOutlet weak var progressBarView: UIProgressView!
     
@@ -30,28 +31,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var Green: UIButton!
     
     @IBOutlet weak var Blue: UIButton!
-    
-    @IBOutlet weak var School: UIButton!
-    
-    @IBOutlet weak var Home: UIButton!
-    
-    
-    
+
     
     override func viewDidLoad() {
+     progressBarView.progress = 0.0
         super.viewDidLoad()
-       Pattern1Button.layer.cornerRadius = 4
-        OFF.layer.cornerRadius = 4
         // Do any additional setup after loading the view, typically from a nib.
         //test
     }
 
-  
-   
-    
-    
     @IBAction func Pattern1Button(_ sender: UIButton) {
         LEDOFF()
+         self.Status.text = "Rainbow"
         let url = URL(string: "http://172.20.10.11/Rainbow")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
@@ -66,6 +57,8 @@ class ViewController: UIViewController {
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             self.progressBarView.progress = 0.8
+            
+           
             
             // Check for Error
             if let error = error {
@@ -88,6 +81,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func OFF(_ sender: Any) {
+       self.Status.text = "OFF"
         let url = URL(string: "http://172.20.10.11/LED=OFF")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
@@ -102,6 +96,8 @@ class ViewController: UIViewController {
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
         self.progressBarView.progress = 0.8
+            
+            
             // Check for Error
             if let error = error {
                 print("Error took place \(error)")
@@ -124,6 +120,7 @@ class ViewController: UIViewController {
     
     @IBAction func Strobe(_ sender: Any) {
         LEDOFF()
+       self.Status.text = "Strobe"
         let url = URL(string: "http://172.20.10.11/pattern3")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
@@ -138,6 +135,9 @@ class ViewController: UIViewController {
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
              self.progressBarView.progress = 0.8
+            
+            
+            
             // Check for Error
             if let error = error {
                 print("Error took place \(error)")
@@ -159,6 +159,7 @@ class ViewController: UIViewController {
     
     @IBAction func Police(_ sender: Any) {
         LEDOFF()
+        self.Status.text = "Police"
         let url = URL(string: "http://172.20.10.11/pattern2")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
@@ -173,6 +174,8 @@ class ViewController: UIViewController {
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             self.progressBarView.progress = 0.8
+            
+           
             
             // Check for Error
             if let error = error {
@@ -195,6 +198,7 @@ class ViewController: UIViewController {
     
     @IBAction func RED(_ sender: Any) {
         LEDOFF()
+        self.Status.text = "Red"
         let url = URL(string: "http://172.20.10.11/Strip=RED")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
@@ -209,6 +213,8 @@ class ViewController: UIViewController {
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
                self.progressBarView.progress = 0.8
+            
+           
             
             // Check for Error
             if let error = error {
@@ -231,6 +237,7 @@ class ViewController: UIViewController {
     
     @IBAction func Green(_ sender: Any) {
         LEDOFF()
+        self.Status.text = "Green"
         let url = URL(string: "http://172.20.10.11/Strip=Green")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
@@ -245,6 +252,8 @@ class ViewController: UIViewController {
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
            self.progressBarView.progress = 0.8
+            
+            
             
             // Check for Error
             if let error = error {
@@ -267,6 +276,7 @@ class ViewController: UIViewController {
     
     @IBAction func Blue(_ sender: Any) {
         LEDOFF()
+        self.Status.text = "Blue"
         let url = URL(string: "http://172.20.10.11/Strip=Blue")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
@@ -281,6 +291,8 @@ class ViewController: UIViewController {
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
            self.progressBarView.progress = 0.8
+            
+           
             
             // Check for Error
             if let error = error {
