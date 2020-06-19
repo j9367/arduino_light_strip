@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D350FAE249C487F00B00917 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D350FAD249C487F00B00917 /* SecondView.swift */; };
+		7D350FAF249C487F00B00917 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D350FAD249C487F00B00917 /* SecondView.swift */; };
+		7D350FB0249C487F00B00917 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D350FAD249C487F00B00917 /* SecondView.swift */; };
 		7D6AC420249982F300BCB484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC41F249982F300BCB484 /* AppDelegate.swift */; };
 		7D6AC422249982F300BCB484 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC421249982F300BCB484 /* ViewController.swift */; };
 		7D6AC425249982F300BCB484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6AC423249982F300BCB484 /* Main.storyboard */; };
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D350FAD249C487F00B00917 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		7D6AC41C249982F300BCB484 /* Light control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6AC41F249982F300BCB484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D6AC421249982F300BCB484 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			children = (
 				7D6AC41F249982F300BCB484 /* AppDelegate.swift */,
 				7D6AC421249982F300BCB484 /* ViewController.swift */,
+				7D350FAD249C487F00B00917 /* SecondView.swift */,
 				7D6AC423249982F300BCB484 /* Main.storyboard */,
 				7D6AC429249982F300BCB484 /* Assets.xcassets */,
 				7D6AC42B249982F300BCB484 /* LaunchScreen.storyboard */,
@@ -267,6 +272,7 @@
 			files = (
 				7D6AC428249982F300BCB484 /* Light_control.xcdatamodeld in Sources */,
 				7D6AC422249982F300BCB484 /* ViewController.swift in Sources */,
+				7D350FAE249C487F00B00917 /* SecondView.swift in Sources */,
 				7D6AC420249982F300BCB484 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D350FAF249C487F00B00917 /* SecondView.swift in Sources */,
 				7D6AC438249982F300BCB484 /* Light_controlTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D350FB0249C487F00B00917 /* SecondView.swift in Sources */,
 				7D6AC443249982F300BCB484 /* Light_controlUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

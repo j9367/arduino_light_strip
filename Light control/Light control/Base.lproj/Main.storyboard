@@ -161,7 +161,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="x6Y-tv-aVq" kind="show" id="p0o-AL-nSs"/>
+                                    <segue destination="x6Y-tv-aVq" kind="show" id="uo6-fX-dqj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -221,11 +221,11 @@
             </objects>
             <point key="canvasLocation" x="90.400000000000006" y="31.03448275862069"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View-->
         <scene sceneID="Rfs-Zg-nT3">
             <objects>
-                <viewController id="x6Y-tv-aVq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ARf-ez-H99">
+                <viewController id="x6Y-tv-aVq" customClass="SecondView" customModule="Light_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ARf-ez-H99" customClass="SecondView" customModule="Light_control" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -241,6 +241,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NvH-zs-2V2"/>
+                        <connections>
+                            <outlet property="colourPicker" destination="65V-V3-LLz" id="jx9-Nv-bmd"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="FdQ-Aw-BP2"/>
                 </viewController>
