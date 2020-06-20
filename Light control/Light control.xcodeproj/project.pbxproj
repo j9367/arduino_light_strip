@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7D350FAE249C487F00B00917 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D350FAD249C487F00B00917 /* SecondView.swift */; };
-		7D350FAF249C487F00B00917 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D350FAD249C487F00B00917 /* SecondView.swift */; };
-		7D350FB0249C487F00B00917 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D350FAD249C487F00B00917 /* SecondView.swift */; };
 		7D6AC420249982F300BCB484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC41F249982F300BCB484 /* AppDelegate.swift */; };
 		7D6AC422249982F300BCB484 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC421249982F300BCB484 /* ViewController.swift */; };
 		7D6AC425249982F300BCB484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6AC423249982F300BCB484 /* Main.storyboard */; };
@@ -281,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D350FAF249C487F00B00917 /* SecondView.swift in Sources */,
 				7D6AC438249982F300BCB484 /* Light_controlTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +287,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D350FB0249C487F00B00917 /* SecondView.swift in Sources */,
 				7D6AC443249982F300BCB484 /* Light_controlUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

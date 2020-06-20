@@ -5,26 +5,100 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.AddressBreakpoint">
+         <BreakpointContent
+            uuid = "B10A4923-A8E3-4B56-A062-CCECFAC26F59"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "*0x1824b4950">
+            <Locations>
+               <Location
+                  uuid = "B10A4923-A8E3-4B56-A062-CCECFAC26F59 - 1a2fdeedbfecd9ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__abort"
+                  moduleName = "libsystem_c.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.AddressBreakpoint">
+         <BreakpointContent
+            uuid = "347970C8-04EB-475C-9E5E-A5E865D70677"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "*0x1824b494c">
+            <Locations>
+               <Location
+                  uuid = "347970C8-04EB-475C-9E5E-A5E865D70677 - 1a2fdeedbfecd9ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__abort"
+                  moduleName = "libsystem_c.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C372E204-B247-45B0-A6A2-FCA147396D30"
+            uuid = "6F5F9EF4-3E8D-40B3-AFE7-AD9C58949AAA"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Light control/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "ViewController"
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "C372E204-B247-45B0-A6A2-FCA147396D30 - ece3d6b1951519c3"
-                  shouldBeEnabled = "Yes"
+                  uuid = "6F5F9EF4-3E8D-40B3-AFE7-AD9C58949AAA - db92dea0d99d96ff"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Light_control.ViewController.__deallocating_deinit"
+                  symbolName = "Light_control.ViewController.Status.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Light control"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vasilis/Documents/GitHub/arduino_light_strip/Light%20control/Light%20control/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "6F5F9EF4-3E8D-40B3-AFE7-AD9C58949AAA - 95d894cf8b1746c3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Light_control.ViewController.Status.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Light control"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vasilis/Documents/GitHub/arduino_light_strip/Light%20control/Light%20control/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "6F5F9EF4-3E8D-40B3-AFE7-AD9C58949AAA - 7b9102be83f64af2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Light_control.ViewController.Status.modify : Swift.Optional&lt;__C.UILabel&gt;"
                   moduleName = "Light control"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vasilis/Documents/GitHub/arduino_light_strip/Light%20control/Light%20control/ViewController.swift"
@@ -32,26 +106,26 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "44">
+                  offsetFromSymbolStart = "65">
                </Location>
                <Location
-                  uuid = "C372E204-B247-45B0-A6A2-FCA147396D30 - 95c4a81d32a18158"
-                  shouldBeEnabled = "Yes"
+                  uuid = "6F5F9EF4-3E8D-40B3-AFE7-AD9C58949AAA - b22062a25fadd36c"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Light_control.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Light_control.ViewController"
+                  symbolName = "Light_control.ViewController.Status.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "Light control"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vasilis/Documents/GitHub/arduino_light_strip/Light%20control/Light%20control/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "80">
                </Location>
                <Location
-                  uuid = "C372E204-B247-45B0-A6A2-FCA147396D30 - 8deb147b925b0e60"
-                  shouldBeEnabled = "Yes"
+                  uuid = "6F5F9EF4-3E8D-40B3-AFE7-AD9C58949AAA - 8deb147b925b0e60"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Light_control.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Light_control.ViewController"
@@ -60,28 +134,13 @@
                   urlString = "file:///Users/vasilis/Documents/GitHub/arduino_light_strip/Light%20control/Light%20control/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "300">
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "464">
                </Location>
                <Location
-                  uuid = "C372E204-B247-45B0-A6A2-FCA147396D30 - 95e172ead2ad8113"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Light_control.ViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Light_control.ViewController&gt;"
-                  moduleName = "Light control"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vasilis/Documents/GitHub/arduino_light_strip/Light%20control/Light%20control/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "C372E204-B247-45B0-A6A2-FCA147396D30 - a93dc6f6e37461af"
-                  shouldBeEnabled = "Yes"
+                  uuid = "6F5F9EF4-3E8D-40B3-AFE7-AD9C58949AAA - a93dc6f6e37461af"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Light_control.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Light_control.ViewController&gt;"
@@ -90,9 +149,9 @@
                   urlString = "file:///Users/vasilis/Documents/GitHub/arduino_light_strip/Light%20control/Light%20control/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "248">
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "405">
                </Location>
             </Locations>
          </BreakpointContent>
