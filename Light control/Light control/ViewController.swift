@@ -4,25 +4,25 @@
 //
 //  Created by Vasilis Michalakis on 17/6/20.
 //  Copyright © 2020 Vasilis Michalakis. All rights reserved.
-//
+
 
 import UIKit
 
-
+var IP = "172.20.10.11"
 
 class ViewController: UIViewController {
 
+    var IPADRESS = "http://" + IP
+    
     @IBOutlet weak var Status: UILabel!
     
     @IBOutlet weak var AI: UIImageView!
     
     @IBOutlet weak var Idle: UILabel!
     
-    
     @IBOutlet weak var Pattern1Button: UIButton!
     
     @IBOutlet weak var signStatus: UIImageView!
-    
     
     @IBOutlet weak var activityIndicator: UIImageView!
     
@@ -40,7 +40,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var Blue: UIButton!
 
+    @IBOutlet weak var Prog: UIActivityIndicatorView!
+    
  
+
+    
+    
+    
+    
    
     
     
@@ -50,17 +57,23 @@ class ViewController: UIViewController {
        
         super.viewDidLoad()
             checkIsConnectedToNetwork()
+        DispatchQueue.main.async {
+             self.AI.isHidden = false
+               self.Idle.isHidden = false
+               self.Prog.stopAnimating()
+        }
     }
     
-
     
   
+
+    
     
    
     @IBAction func Pattern1Button(_ sender: UIButton) {
         LEDOFF()
          self.Status.text = "Rainbow"
-        let url = URL(string: "http://172.20.10.11/Rainbow")
+        let url = URL(string: IPADRESS + "/Rainbow")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
@@ -80,13 +93,23 @@ class ViewController: UIViewController {
         }
        
         print("button works")
- 
+ DispatchQueue.main.async {
+     self.AI.isHidden = false
+     self.Idle.isHidden = false
+     self.Prog.stopAnimating()
+ }
         task.resume()
     }
     
     @IBAction func OFF(_ sender: Any) {
-       self.Status.text = "OFF"
-        let url = URL(string: "http://172.20.10.11/LED=OFF")
+       DispatchQueue.main.async {
+           self.AI.isHidden = true
+           self.Idle.isHidden = true
+           self.Prog.startAnimating()
+            self.Status.text = "OFF"
+        }
+       
+        let url = URL(string: IPADRESS + "/LED=OFF")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
@@ -106,6 +129,11 @@ class ViewController: UIViewController {
         }
         print("button works")
           checkIsConnectedToNetwork()
+        DispatchQueue.main.async {
+            self.AI.isHidden = false
+            self.Idle.isHidden = false
+            self.Prog.stopAnimating()
+        }
        task.resume()
     }
     
@@ -114,7 +142,7 @@ class ViewController: UIViewController {
     @IBAction func Strobe(_ sender: Any) {
         LEDOFF()
        self.Status.text = "Strobe"
-        let url = URL(string: "http://172.20.10.11/pattern3")
+        let url = URL(string: IPADRESS + "/pattern3")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
@@ -136,14 +164,18 @@ class ViewController: UIViewController {
         }
          
         print("button works")
-    
+    DispatchQueue.main.async {
+        self.AI.isHidden = false
+        self.Idle.isHidden = false
+        self.Prog.stopAnimating()
+    }
         task.resume()
     }
     
     @IBAction func Police(_ sender: Any) {
         LEDOFF()
         self.Status.text = "Police"
-        let url = URL(string: "http://172.20.10.11/pattern2")
+        let url = URL(string: IPADRESS + "/pattern2")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
@@ -163,14 +195,18 @@ class ViewController: UIViewController {
             
         }
         print("button works")
-     
+     DispatchQueue.main.async {
+         self.AI.isHidden = false
+         self.Idle.isHidden = false
+         self.Prog.stopAnimating()
+     }
         task.resume()
     }
     
     @IBAction func RED(_ sender: Any) {
         LEDOFF()
         self.Status.text = "Red"
-        let url = URL(string: "http://172.20.10.11/Strip=RED")
+        let url = URL(string: IPADRESS + "/Strip=RED")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
@@ -189,14 +225,18 @@ class ViewController: UIViewController {
        
         }
         print("button works")
-      
+      DispatchQueue.main.async {
+          self.AI.isHidden = false
+          self.Idle.isHidden = false
+          self.Prog.stopAnimating()
+      }
         task.resume()
     }
     
     @IBAction func Green(_ sender: Any) {
         LEDOFF()
         self.Status.text = "Green"
-        let url = URL(string: "http://172.20.10.11/Strip=Green")
+        let url = URL(string: IPADRESS + "/Strip=Green")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
@@ -215,14 +255,18 @@ class ViewController: UIViewController {
          
         }
         print("button works")
-      
+      DispatchQueue.main.async {
+          self.AI.isHidden = false
+          self.Idle.isHidden = false
+          self.Prog.stopAnimating()
+      }
         task.resume()
     }
     
     @IBAction func Blue(_ sender: Any) {
         LEDOFF()
         self.Status.text = "Blue"
-        let url = URL(string: "http://172.20.10.11/Strip=Blue")
+        let url = URL(string: IPADRESS + "/Strip=Blue")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
@@ -242,7 +286,11 @@ class ViewController: UIViewController {
         
         }
         print("button works")
-    
+    DispatchQueue.main.async {
+        self.AI.isHidden = false
+        self.Idle.isHidden = false
+        self.Prog.stopAnimating()
+    }
         task.resume()
     }
     
@@ -253,8 +301,12 @@ class ViewController: UIViewController {
     }
    
     func LEDOFF(){
-       
-        let url = URL(string: "http://172.20.10.11/LED=OFF")
+        DispatchQueue.main.async {
+            self.AI.isHidden = true
+            self.Idle.isHidden = true
+            self.Prog.startAnimating()
+        }
+        let url = URL(string: IPADRESS + "/LED=OFF")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
@@ -278,7 +330,7 @@ class ViewController: UIViewController {
     @IBAction func CP(_ sender: Any) {
     
     
-    let url = URL(string: "http://172.20.10.11/colopicke")
+    let url = URL(string: IPADRESS + "/colopicke")
      guard let requestUrl = url else { fatalError() }
      // Prepare URL Request Object
      var request = URLRequest(url: requestUrl)
@@ -302,7 +354,7 @@ class ViewController: UIViewController {
    
     
     func checkIsConnectedToNetwork() {
-       let hostUrl: String = "http://172.20.10.11"
+       let hostUrl: String = IPADRESS
        if let url = URL(string: hostUrl) {
           var request = URLRequest(url: url)
           request.httpMethod = "HEAD"
