@@ -14,6 +14,12 @@ class ViewController: UIViewController {
 
     var IPADRESS = "http://" + IP
     
+    @IBOutlet var leading: NSLayoutConstraint!
+    
+    @IBOutlet var trailing: NSLayoutConstraint!
+    
+    var menuOut = false
+    
     @IBOutlet weak var Status: UILabel!
     
     @IBOutlet weak var AI: UIImageView!
@@ -42,7 +48,21 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var Prog: UIActivityIndicatorView!
     
- 
+    @IBAction func menuTapped(_ sender: Any) {
+        
+        if menuOut == false {
+            leading.constant = 300
+            trailing.constant = -300
+            menuOut = true
+        } else {
+            leading.constant = 0
+            trailing.constant = 0
+             menuOut = false
+        }
+    
+    
+    }
+    
 
     
     
@@ -52,7 +72,7 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
-    self.signStatus.image?.withRenderingMode(.alwaysTemplate)
+        self.signStatus.image?.withRenderingMode(.alwaysTemplate)
          self.signStatus.tintColor = UIColor.gray
        
         super.viewDidLoad()
