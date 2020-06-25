@@ -8,7 +8,9 @@
 
 import UIKit
 
-var IP = "172.20.10.11"
+
+
+var IP = lastIP
 
 var IPADRESS = "http://" + IP
 

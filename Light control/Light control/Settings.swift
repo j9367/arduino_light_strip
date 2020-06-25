@@ -8,6 +8,8 @@
 
 import UIKit
 
+var lastIP = ""
+
 class Settings: UIViewController {
 
     override func viewDidLoad() {
@@ -16,6 +18,7 @@ class Settings: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    lastIP = "172.20.10.11"
     
     @IBOutlet var IPInput: UITextField!
     
@@ -23,7 +26,9 @@ class Settings: UIViewController {
     
     @IBAction func Sub(_ sender: Any) {
    
-    IP = IPInput.text!
+    
+        lastIP = IP
+        IP = IPInput.text!
         print(IP)
        IPADRESS = "http://" + IP
         print(IPADRESS)
