@@ -15,10 +15,12 @@ class Settings: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+         lastIP = "172.20.10.11"
+        
         // Do any additional setup after loading the view.
     }
     
-    lastIP = "172.20.10.11"
+   
     
     @IBOutlet var IPInput: UITextField!
     
