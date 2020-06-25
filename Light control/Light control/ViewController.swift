@@ -10,16 +10,18 @@ import UIKit
 
 var IP = "172.20.10.11"
 
+var IPADRESS = "http://" + IP
+
 class ViewController: UIViewController {
 
-    var IPADRESS = "http://" + IP
+    
     
     @IBOutlet var leading: NSLayoutConstraint!
     
     @IBOutlet var trailing: NSLayoutConstraint!
     
     var menuOut = false
-    
+
     @IBOutlet weak var Status: UILabel!
     
     @IBOutlet weak var AI: UIImageView!
@@ -62,15 +64,7 @@ class ViewController: UIViewController {
     
     
     }
-    
 
-    
-    
-    
-    
-   
-    
-    
     override func viewDidLoad() {
         self.signStatus.image?.withRenderingMode(.alwaysTemplate)
          self.signStatus.tintColor = UIColor.gray
@@ -84,12 +78,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
-  
-
-    
-    
-   
     @IBAction func Pattern1Button(_ sender: UIButton) {
         LEDOFF()
          self.Status.text = "Rainbow"
