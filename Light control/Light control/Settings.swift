@@ -17,6 +17,8 @@ class Settings: UIViewController {
 
          lastIP = "172.20.10.11"
         
+        IPInput.placeholder = "Enter IP Adress Here"
+        
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +33,7 @@ class Settings: UIViewController {
     
         lastIP = IP
         IP = IPInput.text!
+        IPInput.placeholder = IP
         print(IP)
        IPADRESS = "http://" + IP
         print(IPADRESS)
@@ -39,7 +42,7 @@ class Settings: UIViewController {
     }
     
     
-    
+
     
     
     /*
