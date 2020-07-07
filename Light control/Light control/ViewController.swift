@@ -4,19 +4,52 @@
 //
 //  Created by Vasilis Michalakis on 17/6/20.
 //  Copyright © 2020 Vasilis Michalakis. All rights reserved.
-
+//currentDateTime = Date() use to set time
+//    \(dateFormatter.string(from: currentDateTime)) use to add time value
 
 import UIKit
 
+import Foundation
+
+let defaults = UserDefaults.standard
+
+var IP = ""
+
+var queueState = "on"
+
+var IPADRESS = "http://\(IP)"
+
+var highestNumber = Int.max
+
+var lastButtonPressed = ""
+
+var buttonHistory: [String] = []
+
+var reverseButtonHistory: [String] = Array(buttonHistory.reversed())
+
+var timeButtomHistory: [String] = []
+
+var reverseTimeButtonHistory: [String] = Array(timeButtomHistory.reversed())
+
+var currentDateTime = Date()
+
+let dateFormatter = DateFormatter()
+
+var profileName = ""
+
+var defaultProfileName = "User"
 
 
-var IP = lastIP
-
-var IPADRESS = "http://" + IP
 
 class ViewController: UIViewController {
 
+   
+     
+    let networkQue = DispatchQueue.global(qos: .background)
     
+     let hQueue = DispatchQueue.global(qos: .background)
+    
+    weak var timer: Timer?
     
     @IBOutlet var leading: NSLayoutConstraint!
     
@@ -52,33 +85,137 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var Prog: UIActivityIndicatorView!
     
-    @IBAction func menuTapped(_ sender: Any) {
-        
-        if menuOut == false {
-            leading.constant = 300
-            trailing.constant = -300
-            menuOut = true
-        } else {
-            leading.constant = 0
-            trailing.constant = 0
-             menuOut = false
-        }
     
-    
-    }
 
     override func viewDidLoad() {
+            dateFormatter.timeStyle = .medium
+        
+         defaults.set(defaultHistoryState, forKey: "defaultHistoryState")
+        
+        defaults.set(defaultProfileName, forKey: "defaultProfileName")
+        
+        buttonHistory = defaults.stringArray(forKey: "buttonHistory") ?? [String]()
+        timeButtomHistory = defaults.stringArray(forKey: "timeButtomHistory") ?? [String]()
+        
+        profileName = defaults.string(forKey: "profileName") ?? defaults.value(forKey: "defaultProfileName") as! String
+        
         self.signStatus.image?.withRenderingMode(.alwaysTemplate)
          self.signStatus.tintColor = UIColor.gray
        
         super.viewDidLoad()
-            checkIsConnectedToNetwork()
+           
         DispatchQueue.main.async {
              self.AI.isHidden = false
                self.Idle.isHidden = false
                self.Prog.stopAnimating()
         }
+
+        
+         HistoryState = defaults.string(forKey: "savedHistoryState") ?? defaults.value(forKey: "defaultHistoryState") as! String
+        
+          defaults.set(defaultIP, forKey: "defaultIP")
+        
+        if IP == ""{
+            
+            IP = defaults.string(forKey: "lastIP") ?? defaults.value(forKey: "defaultIP") as! String
+            IPADRESS = "http://\(IP)"
+        }
+    
+        
+     networkQue.async{
+        print("checking URL")
+         let hostUrl: String = IPADRESS
+         if let url = URL(string: hostUrl) {
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            URLSession(configuration: .default)
+            .dataTask(with: request) { (_, response, error) -> Void in
+               guard error == nil else {
+                  print("Error:", error ?? "")
+                  DispatchQueue.main.async{
+                            self.signStatus.image?.withRenderingMode(.alwaysTemplate)
+                            self.signStatus.tintColor = UIColor.red
+                                                            }
+                return
+               }
+               guard (response as? HTTPURLResponse)?
+               .statusCode == 200 else {
+                  print("The host is down")
+                  DispatchQueue.main.async{
+    self.signStatus.image?.withRenderingMode(.alwaysTemplate)
+    self.signStatus.tintColor = UIColor.red
+                                    }
+                return
+               }
+               print("The host is up and running")
+                DispatchQueue.main.async{
+        self.signStatus.image?.withRenderingMode(.alwaysTemplate)
+        self.signStatus.tintColor = UIColor.green
+                    
+                }
+            }
+            .resume()
+         }
+            
+       
+        
+       
+        }
+    startTimer()
+        
+    
+
+    
+            
+        
+        
+       
     }
+
+    
+    func startTimer() {
+        timer?.invalidate()   // just in case you had existing `Timer`, `invalidate` it before we lose our reference to it
+        timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { [weak self] _ in
+            self?.CheckNetworkStatus()
+        }
+    }
+    
+    func updateHistory(){
+        let anotherValue = lastButtonPressed
+        buttonHistory.append(anotherValue)
+         print(lastButtonPressed)
+
+        reverseButtonHistory = Array(buttonHistory.reversed())
+        print (reverseButtonHistory)
+        
+        currentDateTime = Date()
+    
+        let yetAnotherValue = dateFormatter.string(from: currentDateTime)
+        
+        timeButtomHistory.append(yetAnotherValue)
+        
+        reverseTimeButtonHistory = Array(timeButtomHistory.reversed())
+        
+        defaults.set(buttonHistory, forKey: "buttonHistory")
+        defaults.set(timeButtomHistory, forKey: "timeButtomHistory")
+    }
+    
+    @IBAction func menuTapped(_ sender: Any) {
+           if menuOut == false {
+               leading.constant = 300
+               trailing.constant = -300
+               menuOut = true
+           } else {
+               leading.constant = 0
+               trailing.constant = 0
+                menuOut = false
+               
+           }
+       
+       
+       }
+    
+   
     
     @IBAction func Pattern1Button(_ sender: UIButton) {
         LEDOFF()
@@ -106,8 +243,12 @@ class ViewController: UIViewController {
  DispatchQueue.main.async {
      self.AI.isHidden = false
      self.Idle.isHidden = false
-     self.Prog.stopAnimating()
- }
+     
+    self.Prog.stopAnimating()
+    lastButtonPressed = "Rainbow"
+    self.updateHistory()
+    }
+ 
         task.resume()
     }
     
@@ -138,11 +279,14 @@ class ViewController: UIViewController {
             
         }
         print("button works")
-          checkIsConnectedToNetwork()
+          
         DispatchQueue.main.async {
             self.AI.isHidden = false
             self.Idle.isHidden = false
             self.Prog.stopAnimating()
+            
+            lastButtonPressed = "Off"
+               self.updateHistory()
         }
        task.resume()
     }
@@ -178,6 +322,9 @@ class ViewController: UIViewController {
         self.AI.isHidden = false
         self.Idle.isHidden = false
         self.Prog.stopAnimating()
+        
+        lastButtonPressed = "Strobe"
+           self.updateHistory()
     }
         task.resume()
     }
@@ -209,6 +356,8 @@ class ViewController: UIViewController {
          self.AI.isHidden = false
          self.Idle.isHidden = false
          self.Prog.stopAnimating()
+        lastButtonPressed = "Police"
+           self.updateHistory()
      }
         task.resume()
     }
@@ -239,6 +388,8 @@ class ViewController: UIViewController {
           self.AI.isHidden = false
           self.Idle.isHidden = false
           self.Prog.stopAnimating()
+        lastButtonPressed = "Red"
+           self.updateHistory()
       }
         task.resume()
     }
@@ -269,6 +420,8 @@ class ViewController: UIViewController {
           self.AI.isHidden = false
           self.Idle.isHidden = false
           self.Prog.stopAnimating()
+        lastButtonPressed = "Green"
+           self.updateHistory()
       }
         task.resume()
     }
@@ -300,6 +453,8 @@ class ViewController: UIViewController {
         self.AI.isHidden = false
         self.Idle.isHidden = false
         self.Prog.stopAnimating()
+        lastButtonPressed = "Blue"
+           self.updateHistory()
     }
         task.resume()
     }
@@ -363,49 +518,52 @@ class ViewController: UIViewController {
 }
    
     
-    func checkIsConnectedToNetwork() {
-       let hostUrl: String = IPADRESS
-       if let url = URL(string: hostUrl) {
-          var request = URLRequest(url: url)
-          request.httpMethod = "HEAD"
-          URLSession(configuration: .default)
-          .dataTask(with: request) { (_, response, error) -> Void in
-             guard error == nil else {
-                print("Error:", error ?? "")
-            DispatchQueue.main.async {
-                self.signStatus.image?.withRenderingMode(.alwaysTemplate)
-            self.signStatus.tintColor = UIColor.red
-                }
-                return
-             
-            }
-             guard (response as? HTTPURLResponse)?
-             .statusCode == 200 else {
-                print("The host is down")
-                 DispatchQueue.main.async {
-                self.signStatus.image?.withRenderingMode(.alwaysTemplate)
-                           self.signStatus.tintColor = UIColor.red
-                }
-                return
-             }
-             print("The host is up and running")
-            DispatchQueue.main.async {
+    
+    
+
+    func CheckNetworkStatus() {
+        networkQue.async {
+            print(IP)
+            let hostUrl: String = IPADRESS
+                 if let url = URL(string: hostUrl) {
+                    var request = URLRequest(url: url)
+                    request.httpMethod = "GET"
+                    URLSession(configuration: .default)
+                    .dataTask(with: request) { (_, response, error) -> Void in
+                       guard error == nil else {
+                          print("Error:", error ?? "")
+                          DispatchQueue.main.async{
+                          self.signStatus.image?.withRenderingMode(.alwaysTemplate)
+                          self.signStatus.tintColor = UIColor.red
+                                                          }
+                        return
+                       }
+                       guard (response as? HTTPURLResponse)?
+                      .statusCode == 200 else {
+                          print("The host is down")
+                          DispatchQueue.main.async{
             self.signStatus.image?.withRenderingMode(.alwaysTemplate)
-            self.signStatus.tintColor = UIColor.green
-            }
-            
+            self.signStatus.tintColor = UIColor.red
+                                            }
+                        return
+                       }
+                       print("The host is up and running")
+                        DispatchQueue.main.async{
+                self.signStatus.image?.withRenderingMode(.alwaysTemplate)
+                self.signStatus.tintColor = UIColor.green
+                            
+                        }
+                    }
+                    .resume()
+                 }
         }
         
-        .resume()
-        }
-        }
- 
-}
-
-
+        
+    }
 
 
 
   
 
 
+}

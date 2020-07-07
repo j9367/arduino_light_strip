@@ -16,6 +16,7 @@
 		7D6AC42D249982F300BCB484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6AC42B249982F300BCB484 /* LaunchScreen.storyboard */; };
 		7D6AC438249982F300BCB484 /* Light_controlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC437249982F300BCB484 /* Light_controlTests.swift */; };
 		7D6AC443249982F300BCB484 /* Light_controlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC442249982F300BCB484 /* Light_controlUITests.swift */; };
+		7D6F65CC24A7455E00DD4E4C /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F65CB24A7455E00DD4E4C /* History.swift */; };
 		7D73121624A4499500A395CB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D73121524A4499500A395CB /* Settings.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		7D6AC43E249982F300BCB484 /* Light controlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Light controlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6AC442249982F300BCB484 /* Light_controlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light_controlUITests.swift; sourceTree = "<group>"; };
 		7D6AC444249982F400BCB484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D6F65CB24A7455E00DD4E4C /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		7D73121524A4499500A395CB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7D9C251324A0AD7F001046D3 /* Light control.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Light control.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 				7D6AC421249982F300BCB484 /* ViewController.swift */,
 				7D350FAD249C487F00B00917 /* SecondView.swift */,
 				7D6AC423249982F300BCB484 /* Main.storyboard */,
+				7D6F65CB24A7455E00DD4E4C /* History.swift */,
 				7D73121524A4499500A395CB /* Settings.swift */,
 				7D6AC429249982F300BCB484 /* Assets.xcassets */,
 				7D6AC42B249982F300BCB484 /* LaunchScreen.storyboard */,
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6F65CC24A7455E00DD4E4C /* History.swift in Sources */,
 				7D6AC428249982F300BCB484 /* Light_control.xcdatamodeld in Sources */,
 				7D6AC422249982F300BCB484 /* ViewController.swift in Sources */,
 				7D350FAE249C487F00B00917 /* SecondView.swift in Sources */,
