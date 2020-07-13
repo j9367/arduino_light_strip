@@ -23,9 +23,16 @@ class SecondView: UIViewController, WKUIDelegate {
         view = colourPicker
     }
     override func viewDidLoad() {
+        if darkModeState == "On"{
+                   overrideUserInterfaceStyle = .dark
+                   
+               }
+               
+               else {
+                   overrideUserInterfaceStyle = .light
+               }
         super.viewDidLoad()
-        
-        let myURL = URL(string:"http://172.20.10.11/colopicke")
+  let myURL = URL(string:"\(IPADRESS)")
         let myRequest = URLRequest(url: myURL!)
        colourPicker.load(myRequest)
     }}

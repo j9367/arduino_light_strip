@@ -25,6 +25,86 @@ var lastButtonPressed = ""
 
 var buttonHistory: [String] = []
 
+var logoImages = [
+    UIImage(systemName: "lightbulb.fill"),
+    UIImage(systemName: "light.min"),
+    UIImage(systemName: "badge.plus.radiowaves.right"),
+    UIImage(systemName: "bolt.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+    UIImage(systemName: "burst", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+]
+
+var logoImages2 = [
+   
+UIImage(systemName: "lightbulb"),
+    
+    UIImage(systemName: "lightbulb.slash.fill"),
+   
+    
+   
+    UIImage(systemName: "airplayvideo"),
+    
+   
+    
+    UIImage(systemName: "bolt.circle.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+    
+    
+    
+    UIImage(systemName: "bolt.horizontal.circle.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+    
+    
+    
+    UIImage(systemName: "burst.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+   
+]
+
+var logoImages3 = [
+ UIImage(systemName: "lightbulb.slash"),
+  UIImage(systemName: "airplayaudio"),
+  UIImage(systemName: "bolt.circle", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+  UIImage(systemName: "bolt.horizontal.circle", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+ UIImage(systemName: "bolt", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+  
+  
+]
+
+var logoImages4 = [
+UIImage(systemName: "light.max"),
+
+   UIImage(systemName: "command", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+ UIImage(systemName: "bolt.horizontal", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+ UIImage(systemName: "burn", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+ 
+ UIImage(systemName: "bolt.horizontal.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)),
+    
+
+]
+
+var colorArray1 = [
+    UIColor.red,
+    UIColor.green,
+    
+]
+
+var colorArray2 = [
+    
+    UIColor.blue,
+    UIColor.orange,
+   
+]
+
+var colorArray3 = [
+    UIColor.yellow,
+    UIColor.systemIndigo,
+  
+]
+
+var colorArray4 = [
+    UIColor.black,
+    UIColor.white
+]
+
+
+
 var reverseButtonHistory: [String] = Array(buttonHistory.reversed())
 
 var timeButtomHistory: [String] = []
@@ -39,6 +119,8 @@ var profileName = ""
 
 var defaultProfileName = "User"
 
+var customPatternsChosen: [String] = []
+
 
 
 class ViewController: UIViewController {
@@ -48,6 +130,7 @@ class ViewController: UIViewController {
     let networkQue = DispatchQueue.global(qos: .background)
     
      let hQueue = DispatchQueue.global(qos: .background)
+
     
     weak var timer: Timer?
     
@@ -59,15 +142,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var Status: UILabel!
     
-    @IBOutlet weak var AI: UIImageView!
+
     
-    @IBOutlet weak var Idle: UILabel!
+   
     
     @IBOutlet weak var Pattern1Button: UIButton!
     
     @IBOutlet weak var signStatus: UIImageView!
     
-    @IBOutlet weak var activityIndicator: UIImageView!
+
     
     @IBOutlet weak var CP: UIButton!
     
@@ -83,12 +166,38 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var Blue: UIButton!
 
-    @IBOutlet weak var Prog: UIActivityIndicatorView!
-    
+        
+    override func viewDidAppear(_ animated: Bool) {
+        
+        DispatchQueue.main.async{
+        super.viewDidAppear(animated)
+        
+            if darkModeState == "On"{
+        self.overrideUserInterfaceStyle = .dark
+              
+          }
+          
+          else {
+        self.overrideUserInterfaceStyle = .light
+          }
+        }
+        
+        
+    }
     
 
     override func viewDidLoad() {
-            dateFormatter.timeStyle = .medium
+
+      
+        
+        defaults.set(defaultDarkModeState, forKey: "defaultDarkModeState")
+        
+          darkModeState = defaults.string(forKey: "darkModeState") ?? defaults.value(forKey: "defaultDarkModeState") as! String
+        
+       
+      
+        
+        dateFormatter.timeStyle = .medium
         
          defaults.set(defaultHistoryState, forKey: "defaultHistoryState")
         
@@ -104,12 +213,7 @@ class ViewController: UIViewController {
        
         super.viewDidLoad()
            
-        DispatchQueue.main.async {
-             self.AI.isHidden = false
-               self.Idle.isHidden = false
-               self.Prog.stopAnimating()
-        }
-
+       
         
          HistoryState = defaults.string(forKey: "savedHistoryState") ?? defaults.value(forKey: "defaultHistoryState") as! String
         
@@ -205,15 +309,70 @@ class ViewController: UIViewController {
                leading.constant = 300
                trailing.constant = -300
                menuOut = true
+            if darkModeState == "On"{
+                      overrideUserInterfaceStyle = .dark
+                      
+                  }
+                  
+                  else {
+                      overrideUserInterfaceStyle = .light
+                  }
            } else {
                leading.constant = 0
                trailing.constant = 0
                 menuOut = false
+            if darkModeState == "On"{
+                      overrideUserInterfaceStyle = .dark
+                      
+                  }
+                  
+                  else {
+                      overrideUserInterfaceStyle = .light
+                  }
                
            }
        
        
        }
+    
+    @IBAction func Swiped(_ sender: Any) {
+        if menuOut == false {
+            leading.constant = 300
+            trailing.constant = -300
+            menuOut = true
+            if darkModeState == "On"{
+                      overrideUserInterfaceStyle = .dark
+                      
+                  }
+                  
+                  else {
+                      overrideUserInterfaceStyle = .light
+                  }
+        }
+        else {
+            return
+        }
+    }
+    
+    @IBAction func Swiped2(_ sender: Any) {
+        if menuOut == true{
+            leading.constant = 0
+            trailing.constant = 0
+             menuOut = false
+            if darkModeState == "On"{
+                      overrideUserInterfaceStyle = .dark
+                      
+                  }
+                  
+                  else {
+                      overrideUserInterfaceStyle = .light
+                  }
+        }
+        else {
+            return
+        }
+    }
+    
     
    
     
@@ -241,10 +400,7 @@ class ViewController: UIViewController {
        
         print("button works")
  DispatchQueue.main.async {
-     self.AI.isHidden = false
-     self.Idle.isHidden = false
-     
-    self.Prog.stopAnimating()
+   
     lastButtonPressed = "Rainbow"
     self.updateHistory()
     }
@@ -254,9 +410,7 @@ class ViewController: UIViewController {
     
     @IBAction func OFF(_ sender: Any) {
        DispatchQueue.main.async {
-           self.AI.isHidden = true
-           self.Idle.isHidden = true
-           self.Prog.startAnimating()
+       
             self.Status.text = "OFF"
         }
        
@@ -281,9 +435,7 @@ class ViewController: UIViewController {
         print("button works")
           
         DispatchQueue.main.async {
-            self.AI.isHidden = false
-            self.Idle.isHidden = false
-            self.Prog.stopAnimating()
+           
             
             lastButtonPressed = "Off"
                self.updateHistory()
@@ -319,9 +471,7 @@ class ViewController: UIViewController {
          
         print("button works")
     DispatchQueue.main.async {
-        self.AI.isHidden = false
-        self.Idle.isHidden = false
-        self.Prog.stopAnimating()
+        
         
         lastButtonPressed = "Strobe"
            self.updateHistory()
@@ -353,9 +503,7 @@ class ViewController: UIViewController {
         }
         print("button works")
      DispatchQueue.main.async {
-         self.AI.isHidden = false
-         self.Idle.isHidden = false
-         self.Prog.stopAnimating()
+       
         lastButtonPressed = "Police"
            self.updateHistory()
      }
@@ -385,9 +533,7 @@ class ViewController: UIViewController {
         }
         print("button works")
       DispatchQueue.main.async {
-          self.AI.isHidden = false
-          self.Idle.isHidden = false
-          self.Prog.stopAnimating()
+         
         lastButtonPressed = "Red"
            self.updateHistory()
       }
@@ -417,9 +563,7 @@ class ViewController: UIViewController {
         }
         print("button works")
       DispatchQueue.main.async {
-          self.AI.isHidden = false
-          self.Idle.isHidden = false
-          self.Prog.stopAnimating()
+        
         lastButtonPressed = "Green"
            self.updateHistory()
       }
@@ -450,9 +594,7 @@ class ViewController: UIViewController {
         }
         print("button works")
     DispatchQueue.main.async {
-        self.AI.isHidden = false
-        self.Idle.isHidden = false
-        self.Prog.stopAnimating()
+       
         lastButtonPressed = "Blue"
            self.updateHistory()
     }
@@ -466,11 +608,7 @@ class ViewController: UIViewController {
     }
    
     func LEDOFF(){
-        DispatchQueue.main.async {
-            self.AI.isHidden = true
-            self.Idle.isHidden = true
-            self.Prog.startAnimating()
-        }
+        
         let url = URL(string: IPADRESS + "/LED=OFF")
         guard let requestUrl = url else { fatalError() }
         // Prepare URL Request Object
@@ -522,6 +660,9 @@ class ViewController: UIViewController {
     
 
     func CheckNetworkStatus() {
+      
+
+        
         networkQue.async {
             print(IP)
             let hostUrl: String = IPADRESS

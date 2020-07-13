@@ -26,26 +26,54 @@ class History: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         self.Table.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         Table.delegate = self
         Table.dataSource = self
         
+        if darkModeState == "On"{
+            overrideUserInterfaceStyle = .dark
+            
+        }
+        
+        else {
+            overrideUserInterfaceStyle = .light
+        }
         
         if HistoryState == "on"{
             Image.isHidden = true
             Label.isHidden = true
             Table.isHidden = false
+            if reverseButtonHistory.count == 0 {
+                Image.image = UIImage(systemName: "arrow.counterclockwise")
+                Image.isHidden = false
+                 Label.text = "No History to Display"
+                Label.center.x = self.view.center.x
+                 Label.center.y = self.view.center.y
+                Label.isHidden = false
+                Table.isHidden = true
+            }
+            
+            else{
+              Image.isHidden = true
+                Label.isHidden = true
+                Table.isHidden = false
+            }
         }
         else {
+            
+            Image.image = UIImage(systemName: "arrow.counterclockwise.icloud.fill")
             Image.isHidden = false
+            Label.text = "Enable History in Settings"
             Label.isHidden = false
             Table.isHidden = true
         }
         
+        
+        
         self.Table.rowHeight = 103.0
         // Do any additional setup after loading the view.
-    
+     
     }
     
     @IBOutlet var Blocker: UIView!
@@ -109,7 +137,7 @@ class History: UIViewController, UITableViewDelegate, UITableViewDataSource {
                  cell.Symbol.tintColor = UIColor.gray
              }
     
-
+    
     
     return cell
    }

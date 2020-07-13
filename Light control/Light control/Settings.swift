@@ -18,21 +18,28 @@ var lastIP = ""
 
 var defaultIP = "172.20.10.11"
 
-
+var darkModeState = "Off"
 
 var defaultHistoryState = "on"
 
+var defaultDarkModeState = "On"
+
+ 
 
 class Settings: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
        
+       
         
-      
+       
+        
+        
+        
         
       IPInput.placeholder = ("\(IP) - IP Adress")
-    
+     NameInput.placeholder = profileName
         
         
         
@@ -41,11 +48,19 @@ class Settings: UIViewController {
             animated: true)
         }
         // Do any additional setup after loading the view.
-  
+        if darkModeState == "On" {
+            DarkMode.setOn(true, animated: true)
+        }
+        
+        else {
+             DarkMode.setOn(false, animated: true)
+            overrideUserInterfaceStyle = .light
+        }
     
     }
     
    
+    @IBOutlet weak var DarkMode: UISwitch!
     
     @IBOutlet var IPInput: UITextField!
     
@@ -70,23 +85,30 @@ class Settings: UIViewController {
         print(lastIP)
        
         defaults.set(lastIP, forKey: "lastIP")
-     
     
+        let IPAlert = UIAlertController(title: "IP Adress Change!", message: "Old IP: \(lastIP) New IP: \(IP)", preferredStyle: .alert)
+   IPAlert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+         self.present(IPAlert, animated: true)
+        
     }
     
     @IBAction func changeName(_ sender: Any) {
         
         profileName = NameInput.text!
         defaults.set(profileName, forKey: "profileName")
+         let profileAlert = UIAlertController(title: "Username Profile Changed", message: "New profile name: \(profileName)", preferredStyle: .alert)
+        profileAlert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(profileAlert, animated: true)
+       
     }
     
     
-    @IBOutlet var DM: UISwitch!
+   
     
     @IBOutlet weak var HistorySwitch: UISwitch!
     
     
-    @IBOutlet var Notifications: UISwitch!
+
     
    
     @IBAction func ToggleSwitched(_ sender: Any) {
@@ -112,7 +134,20 @@ class Settings: UIViewController {
  
     }
     
-    
+
+    @IBAction func ToggledSwitch(_ sender: Any) {
+        if DarkMode.isOn{
+            overrideUserInterfaceStyle = .dark
+            
+            darkModeState = "On"
+            defaults.set(darkModeState, forKey: "darkModeState")
+        }
+        else {
+            overrideUserInterfaceStyle = .light
+            darkModeState = "Off"
+            defaults.set(darkModeState, forKey: "darkModeState")
+        }
+    }
     
     
 }
