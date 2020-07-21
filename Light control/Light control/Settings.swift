@@ -50,11 +50,14 @@ class Settings: UIViewController {
         // Do any additional setup after loading the view.
         if darkModeState == "On" {
             DarkMode.setOn(true, animated: true)
+            overrideUserInterfaceStyle = .dark
+            
         }
         
         else {
              DarkMode.setOn(false, animated: true)
             overrideUserInterfaceStyle = .light
+             
         }
     
     }
@@ -86,7 +89,7 @@ class Settings: UIViewController {
        
         defaults.set(lastIP, forKey: "lastIP")
     
-        let IPAlert = UIAlertController(title: "IP Adress Change!", message: "Old IP: \(lastIP) New IP: \(IP)", preferredStyle: .alert)
+        let IPAlert = UIAlertController(title: "IP Adress Change!", message: "Old IP: \(lastIP) New IP: \(IP) ConnectionStatus()", preferredStyle: .alert)
    IPAlert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
          self.present(IPAlert, animated: true)
         
@@ -148,6 +151,5 @@ class Settings: UIViewController {
             defaults.set(darkModeState, forKey: "darkModeState")
         }
     }
-    
     
 }

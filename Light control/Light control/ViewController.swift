@@ -126,7 +126,15 @@ var customPatternsChosen: [String] = []
 class ViewController: UIViewController {
 
    
-     
+    @IBOutlet weak var Settings: UIButton!
+    
+    @IBOutlet weak var HistoryButtonMenu: UIButton!
+    
+    @IBOutlet weak var CLPButton: UIButton!
+    
+    @IBOutlet weak var CPB: UIButton!
+    
+    
     let networkQue = DispatchQueue.global(qos: .background)
     
      let hQueue = DispatchQueue.global(qos: .background)
@@ -179,6 +187,7 @@ class ViewController: UIViewController {
           
           else {
         self.overrideUserInterfaceStyle = .light
+                
           }
         }
         
@@ -303,6 +312,32 @@ class ViewController: UIViewController {
         defaults.set(buttonHistory, forKey: "buttonHistory")
         defaults.set(timeButtomHistory, forKey: "timeButtomHistory")
     }
+    
+    @IBAction func SBPT(_ sender: Any) {
+    leading.constant = 0
+                 trailing.constant = 0
+                  menuOut = false
+    }
+    
+    @IBAction func HBPT(_ sender: Any) {
+    leading.constant = 0
+                 trailing.constant = 0
+                  menuOut = false
+    }
+    
+    @IBAction func CLPPT(_ sender: Any) {
+    leading.constant = 0
+                 trailing.constant = 0
+                  menuOut = false
+    }
+    
+    @IBAction func CPPT(_ sender: Any) {
+    leading.constant = 0
+                 trailing.constant = 0
+                  menuOut = false
+    }
+    
+    
     
     @IBAction func menuTapped(_ sender: Any) {
            if menuOut == false {

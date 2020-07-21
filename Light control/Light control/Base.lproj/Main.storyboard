@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fx3-Ox-M8X">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,6 +24,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
+                                    <action selector="SBPT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egp-E9-yc9"/>
                                     <segue destination="iYq-Ve-ghc" kind="show" id="iui-Sh-s1v"/>
                                 </connections>
                             </button>
@@ -36,6 +37,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="19" scale="large"/>
                                 </state>
                                 <connections>
+                                    <action selector="HBPT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJJ-eW-DTj"/>
                                     <segue destination="UC6-dA-7Zy" kind="show" id="7BT-gC-zEh"/>
                                 </connections>
                             </button>
@@ -48,6 +50,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="19" scale="large"/>
                                 </state>
                                 <connections>
+                                    <action selector="CLPPT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xXE-CI-z3D"/>
                                     <segue destination="rSL-eP-Bzb" kind="show" id="CZ5-Yi-nMP"/>
                                 </connections>
                             </button>
@@ -60,6 +63,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
+                                    <action selector="CPPT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X9U-wt-tL3"/>
                                     <segue destination="x6Y-tv-aVq" kind="show" id="nYa-Lr-jUJ"/>
                                 </connections>
                             </button>
@@ -253,12 +257,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="Blue" destination="dzT-cV-oaR" id="GSv-tc-iFP"/>
+                        <outlet property="CLPButton" destination="VKB-QM-04k" id="dob-ca-fix"/>
                         <outlet property="CP" destination="cub-Bv-eAu" id="RUn-Oy-lDB"/>
+                        <outlet property="CPB" destination="Npj-Eg-USz" id="GL1-gd-BW9"/>
                         <outlet property="Green" destination="NuE-I8-eTE" id="XH4-lT-7WU"/>
+                        <outlet property="HistoryButtonMenu" destination="lub-Qt-Yva" id="FwJ-TK-90J"/>
                         <outlet property="OFF" destination="RPZ-Zv-XsI" id="UVn-lF-kRg"/>
                         <outlet property="Pattern1Button" destination="8bC-Xf-vdC" id="uaS-qh-8ZN"/>
                         <outlet property="Police" destination="H2m-aU-YKV" id="A6d-4G-Z7U"/>
                         <outlet property="RED" destination="Wf8-eo-b8h" id="5Gv-u3-G2Q"/>
+                        <outlet property="Settings" destination="BeE-ye-DTN" id="Ojz-9P-uBi"/>
                         <outlet property="Status" destination="FFm-7g-Fow" id="5rG-pf-JkW"/>
                         <outlet property="Strobe" destination="H5a-U2-8dA" id="1pt-Pj-ifS"/>
                         <outlet property="leading" destination="xSM-Ii-bih" id="SdP-3r-NLS"/>
@@ -418,7 +426,7 @@
             </objects>
             <point key="canvasLocation" x="1746.4000000000001" y="30.295566502463057"/>
         </scene>
-        <!--Hisotry-->
+        <!--History-->
         <scene sceneID="mnd-5b-9mc">
             <objects>
                 <viewController restorationIdentifier="History" id="UC6-dA-7Zy" customClass="History" customModule="Light_control" customModuleProvider="target" sceneMemberID="viewController">
@@ -489,7 +497,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5jL-1B-JaN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hisotry" id="ukG-hM-wHp">
+                    <navigationItem key="navigationItem" title="History" id="ukG-hM-wHp">
                         <barButtonItem key="rightBarButtonItem" image="trash" catalog="system" style="plain" id="FmQ-DQ-pYc">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UHL-4o-AbB">
                                 <rect key="frame" x="286" y="9" width="73" height="26"/>
@@ -649,9 +657,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yU0-rD-mBH">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pbi-bv-JCP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YXs-Al-Bgr"/>
                     </connections>
