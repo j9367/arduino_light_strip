@@ -177,6 +177,22 @@ class ViewController: UIViewController {
         
     override func viewDidAppear(_ animated: Bool) {
         
+        if darkModeState == "On" {
+           
+            overrideUserInterfaceStyle = .dark
+            navigationController?.navigationBar.backgroundColor = UIColor.black
+            navigationController?.navigationBar.barTintColor = UIColor.black
+        }
+        
+        else {
+             
+            overrideUserInterfaceStyle = .light
+            navigationController?.navigationBar.backgroundColor = UIColor(red: (245.0/255.0), green: (245.0/255.0), blue: (245.0/255.0), alpha: 1.0)
+            navigationController?.navigationBar.barTintColor = UIColor(red: (245.0/255.0), green: (245.0/255.0), blue: (245.0/255.0), alpha: 1.0)
+            
+        }
+
+        
         DispatchQueue.main.async{
         super.viewDidAppear(animated)
         

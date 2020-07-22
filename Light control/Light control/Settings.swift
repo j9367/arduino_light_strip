@@ -48,18 +48,20 @@ class Settings: UIViewController {
             animated: true)
         }
         // Do any additional setup after loading the view.
+   
         if darkModeState == "On" {
-            DarkMode.setOn(true, animated: true)
-            overrideUserInterfaceStyle = .dark
-            
-        }
-        
-        else {
-             DarkMode.setOn(false, animated: true)
-            overrideUserInterfaceStyle = .light
-             
-        }
-    
+                  DarkMode.setOn(true, animated: true)
+                  overrideUserInterfaceStyle = .dark
+                  navigationController?.navigationBar.backgroundColor = UIColor.black
+                  navigationController?.navigationBar.barTintColor = UIColor.black
+              }
+              
+              else {
+                   DarkMode.setOn(false, animated: true)
+                  overrideUserInterfaceStyle = .light
+                  navigationController?.navigationBar.backgroundColor = UIColor(red: (245.0/255.0), green: (245.0/255.0), blue: (245.0/255.0), alpha: 1.0)
+                  navigationController?.navigationBar.barTintColor = UIColor(red: (245.0/255.0), green: (245.0/255.0), blue: (245.0/255.0), alpha: 1.0)
+              }
     }
     
    
@@ -141,12 +143,16 @@ class Settings: UIViewController {
     @IBAction func ToggledSwitch(_ sender: Any) {
         if DarkMode.isOn{
             overrideUserInterfaceStyle = .dark
+            navigationController?.navigationBar.backgroundColor = UIColor.black
+            navigationController?.navigationBar.barTintColor = UIColor.black
             
             darkModeState = "On"
             defaults.set(darkModeState, forKey: "darkModeState")
         }
         else {
             overrideUserInterfaceStyle = .light
+            navigationController?.navigationBar.backgroundColor = UIColor(red: (245.0/255.0), green: (245.0/255.0), blue: (245.0/255.0), alpha: 1.0)
+            navigationController?.navigationBar.barTintColor = UIColor(red: (245.0/255.0), green: (245.0/255.0), blue: (245.0/255.0), alpha: 1.0)
             darkModeState = "Off"
             defaults.set(darkModeState, forKey: "darkModeState")
         }
