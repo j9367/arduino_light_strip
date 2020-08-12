@@ -5,7 +5,7 @@
 #define PIN    2
 
 // How many NeoPixels are attached to the Arduino?
-#define NUMPIXELS  7
+#define NUMPIXELS  8
 
 // NeoPixel brightness, 0 (min) to 255 (max)
 #define BRIGHTNESS 50
@@ -18,9 +18,9 @@ Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 #define DELAYVAL 100
  
 
-const char* ssid = "iPhone";    //  Your Wi-Fi Name
+const char* ssid = "James iPhone";    //  Your Wi-Fi Name
 
-const char* password = "Corunna60!";   // Wi-Fi Password
+const char* password = "TestingCode";   // Wi-Fi Password
 
 const char* State = "on";
 
@@ -49,7 +49,7 @@ void setup()
 
   WiFi.begin(ssid, password);
 
-  IPAddress ip(172, 20, 10, 11);  
+  IPAddress ip(172, 20, 10, 42);  
 
   while (WiFi.status() != WL_CONNECTED)
 
