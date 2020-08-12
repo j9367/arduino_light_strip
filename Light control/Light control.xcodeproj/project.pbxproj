@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D350FAE249C487F00B00917 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D350FAD249C487F00B00917 /* SecondView.swift */; };
+		7D4A69C024D3B938005124AC /* TableCustomChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A69BF24D3B938005124AC /* TableCustomChooser.swift */; };
 		7D6AC420249982F300BCB484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC41F249982F300BCB484 /* AppDelegate.swift */; };
 		7D6AC422249982F300BCB484 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC421249982F300BCB484 /* ViewController.swift */; };
 		7D6AC425249982F300BCB484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6AC423249982F300BCB484 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		7D6AC443249982F300BCB484 /* Light_controlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC442249982F300BCB484 /* Light_controlUITests.swift */; };
 		7D6F65CC24A7455E00DD4E4C /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F65CB24A7455E00DD4E4C /* History.swift */; };
 		7D73121624A4499500A395CB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D73121524A4499500A395CB /* Settings.swift */; };
+		7D7AC88924CAE24700E98806 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7AC88824CAE24700E98806 /* ExternalAccessory.framework */; };
 		7DD28E3124BB2E1A00D53FB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC41F249982F300BCB484 /* AppDelegate.swift */; };
 		7DD28E3224BB2E1B00D53FB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6AC41F249982F300BCB484 /* AppDelegate.swift */; };
 		7DF56C9424B5F27C0047ED67 /* customLightPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF56C9324B5F27C0047ED67 /* customLightPatterns.swift */; };
@@ -55,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		7D350FAD249C487F00B00917 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		7D4A69BF24D3B938005124AC /* TableCustomChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCustomChooser.swift; sourceTree = "<group>"; };
 		7D6AC41C249982F300BCB484 /* Light control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6AC41F249982F300BCB484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D6AC421249982F300BCB484 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		7D6AC444249982F400BCB484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D6F65CB24A7455E00DD4E4C /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		7D73121524A4499500A395CB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		7D7AC88824CAE24700E98806 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		7D9C251324A0AD7F001046D3 /* Light control.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Light control.entitlements"; sourceTree = "<group>"; };
 		7DF56C9324B5F27C0047ED67 /* customLightPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLightPatterns.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D7AC88924CAE24700E98806 /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,7 @@
 				7D6AC436249982F300BCB484 /* Light controlTests */,
 				7D6AC441249982F300BCB484 /* Light controlUITests */,
 				7D6AC41D249982F300BCB484 /* Products */,
+				7D7AC88724CAE24700E98806 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +134,7 @@
 				7D6AC421249982F300BCB484 /* ViewController.swift */,
 				7D350FAD249C487F00B00917 /* SecondView.swift */,
 				7D6AC423249982F300BCB484 /* Main.storyboard */,
+				7D4A69BF24D3B938005124AC /* TableCustomChooser.swift */,
 				7DF56C9324B5F27C0047ED67 /* customLightPatterns.swift */,
 				7D6F65CB24A7455E00DD4E4C /* History.swift */,
 				7D73121524A4499500A395CB /* Settings.swift */,
@@ -155,6 +162,14 @@
 				7D6AC444249982F400BCB484 /* Info.plist */,
 			);
 			path = "Light controlUITests";
+			sourceTree = "<group>";
+		};
+		7D7AC88724CAE24700E98806 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D7AC88824CAE24700E98806 /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +242,6 @@
 					7D6AC41B249982F300BCB484 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 1150;
-						ProvisioningStyle = Automatic;
 					};
 					7D6AC432249982F300BCB484 = {
 						CreatedOnToolsVersion = 9.0;
@@ -296,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D6F65CC24A7455E00DD4E4C /* History.swift in Sources */,
+				7D4A69C024D3B938005124AC /* TableCustomChooser.swift in Sources */,
 				7D6AC428249982F300BCB484 /* Light_control.xcdatamodeld in Sources */,
 				7D6AC422249982F300BCB484 /* ViewController.swift in Sources */,
 				7D350FAE249C487F00B00917 /* SecondView.swift in Sources */,
@@ -408,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -461,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -475,10 +490,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Light control/Light control.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = 8J765624E4;
 				INFOPLIST_FILE = "Light control/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,6 +503,7 @@
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "determined-man.Light-control";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,10 +515,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Light control/Light control.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = 8J765624E4;
 				INFOPLIST_FILE = "Light control/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,6 +528,7 @@
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "determined-man.Light-control";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
