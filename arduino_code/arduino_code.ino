@@ -1,26 +1,29 @@
 #include <Adafruit_NeoPixel.h>
-#ifdef __AVR__
- #include <avr/power.h> // Required for 16 MHz Adafruit Trinket
-#endif
-#define PIN    2
+
+#define PIN    4
 
 // How many NeoPixels are attached to the Arduino?
-#define NUMPIXELS  7
+#define NUMPIXELS  8
 
 // NeoPixel brightness, 0 (min) to 255 (max)
 #define BRIGHTNESS 50
 
+IPAddress staticIP(192, 168, 0, 241);  
+IPAddress gateway(192, 168, 0, 1);
+IPAddress subnet(255, 255, 255, 0);
+IPAddress dns(192, 168, 0, 1);
+
 // Declare our NeoPixel strip objects
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-#include <ESP8266WiFi.h>
+#include <WiFi.h>
 
 #define DELAYVAL 100
  
 
-const char* ssid = "iPhone";    //  Your Wi-Fi Name
+const char* ssid = "Vasilis's Wi-Fi Network";    //  Your Wi-Fi Name
 
-const char* password = "Corunna60!";   // Wi-Fi Password
+const char* password = "Corunna60";   // Wi-Fi Password
 
 const char* State = "on"; //forces while loop
 
@@ -55,12 +58,7 @@ void setup()
 
 {
 
-  // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
-  // Any other board, you can remove this part (but no harm leaving it):
-#if defined(__AVR_ATtiny85__) && (F_CPU == 16000000)
-  clock_prescale_set(clock_div_1);
-#endif
-  // END of Trinket-specific code.
+
 
   pixels.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
   pixels.clear();            // Turn OFF all pixels ASAP
@@ -70,9 +68,11 @@ void setup()
 
   Serial.print("Connecting to the Newtork"); 
 
+  WiFi.config(staticIP, gateway, subnet, dns);
+  
   WiFi.begin(ssid, password); //starts the wifi connection
 
-  IPAddress ip(172, 20, 10, 11);  
+  
 
   while (WiFi.status() != WL_CONNECTED) //checks wifi is connected
 
@@ -132,7 +132,7 @@ void loop()
 
  
 
-  String request = client.readStringUntil('\r'); //reads end of URL and runs functions
+  String request = client.readStringUntil('\n'); //reads end of URL and runs functions
 
   Serial.println(request);
 
@@ -508,6 +508,7 @@ void pattern() //function for light patterns
           pixels.setPixelColor(i+7, pixels.Color(255,0,0));
           pixels.setPixelColor(i+8, pixels.Color(128,0,128));
           pixels.show(); //Turn the pixels on
+          pixels.show();
           delay(DELAYVAL); //Wait delay value before moving on to the next pixel
           }
         }
