@@ -125,6 +125,7 @@ var customPatternsChosen: [String] = []
 
 class ViewController: UIViewController {
 
+    
    
     @IBOutlet weak var Settings: UIButton!
     
@@ -134,12 +135,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var CPB: UIButton!
     
-    
     let networkQue = DispatchQueue.global(qos: .background)
     
      let hQueue = DispatchQueue.global(qos: .background)
 
-    
     weak var timer: Timer?
     
     @IBOutlet var leading: NSLayoutConstraint!
@@ -150,15 +149,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var Status: UILabel!
     
-
-    
-   
-    
     @IBOutlet weak var Pattern1Button: UIButton!
     
     @IBOutlet weak var signStatus: UIImageView!
-    
-
     
     @IBOutlet weak var CP: UIButton!
     
@@ -175,53 +168,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var Blue: UIButton!
 
         
-    override func viewDidAppear(_ animated: Bool) {
-        
-        if darkModeState == "On" {
-           
-            overrideUserInterfaceStyle = .dark
-            navigationController?.navigationBar.backgroundColor = UIColor.black
-            navigationController?.navigationBar.barTintColor = UIColor.black
-        }
-        
-        else {
-             
-            overrideUserInterfaceStyle = .light
-            navigationController?.navigationBar.backgroundColor = UIColor(red: (245.0/255.0), green: (245.0/255.0), blue: (245.0/255.0), alpha: 1.0)
-            navigationController?.navigationBar.barTintColor = UIColor(red: (245.0/255.0), green: (245.0/255.0), blue: (245.0/255.0), alpha: 1.0)
-            
-        }
-
-        
-        DispatchQueue.main.async{
-        super.viewDidAppear(animated)
-        
-            if darkModeState == "On"{
-        self.overrideUserInterfaceStyle = .dark
-              
-          }
-          
-          else {
-        self.overrideUserInterfaceStyle = .light
-                
-          }
-        }
-        
-        
-    }
     
 
     override func viewDidLoad() {
 
-      
-        
-        defaults.set(defaultDarkModeState, forKey: "defaultDarkModeState")
-        
-          darkModeState = defaults.string(forKey: "darkModeState") ?? defaults.value(forKey: "defaultDarkModeState") as! String
-        
-       
-      
-        
+
         dateFormatter.timeStyle = .medium
         
          defaults.set(defaultHistoryState, forKey: "defaultHistoryState")
@@ -360,26 +311,14 @@ class ViewController: UIViewController {
                leading.constant = 300
                trailing.constant = -300
                menuOut = true
-            if darkModeState == "On"{
-                      overrideUserInterfaceStyle = .dark
-                      
-                  }
+           
                   
-                  else {
-                      overrideUserInterfaceStyle = .light
-                  }
+                  
            } else {
                leading.constant = 0
                trailing.constant = 0
                 menuOut = false
-            if darkModeState == "On"{
-                      overrideUserInterfaceStyle = .dark
-                      
-                  }
-                  
-                  else {
-                      overrideUserInterfaceStyle = .light
-                  }
+          
                
            }
        
@@ -391,14 +330,7 @@ class ViewController: UIViewController {
             leading.constant = 300
             trailing.constant = -300
             menuOut = true
-            if darkModeState == "On"{
-                      overrideUserInterfaceStyle = .dark
-                      
-                  }
-                  
-                  else {
-                      overrideUserInterfaceStyle = .light
-                  }
+         
         }
         else {
             return
@@ -410,14 +342,7 @@ class ViewController: UIViewController {
             leading.constant = 0
             trailing.constant = 0
              menuOut = false
-            if darkModeState == "On"{
-                      overrideUserInterfaceStyle = .dark
-                      
-                  }
-                  
-                  else {
-                      overrideUserInterfaceStyle = .light
-                  }
+           
         }
         else {
             return
@@ -705,10 +630,7 @@ class ViewController: UIViewController {
 
 
 }
-   
-    
-    
-    
+       
 
     func CheckNetworkStatus() {
       

@@ -31,14 +31,7 @@ class History: UIViewController, UITableViewDelegate, UITableViewDataSource {
         Table.delegate = self
         Table.dataSource = self
         
-        if darkModeState == "On"{
-            overrideUserInterfaceStyle = .dark
-            
-        }
-        
-        else {
-            overrideUserInterfaceStyle = .light
-        }
+       
         
         if HistoryState == "on"{
             Image.isHidden = true
