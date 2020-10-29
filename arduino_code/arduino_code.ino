@@ -5,7 +5,11 @@
 #define PIN    2
 
 // How many NeoPixels are attached to the Arduino?
+<<<<<<< Updated upstream
 #define NUMPIXELS  8
+=======
+#define NUMPIXELS  10
+>>>>>>> Stashed changes
 
 // NeoPixel brightness, 0 (min) to 255 (max)
 #define BRIGHTNESS 50
@@ -20,17 +24,42 @@ Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 const char* ssid = "James iPhone";    //  Your Wi-Fi Name
 
+<<<<<<< Updated upstream
 const char* password = "TestingCode";   // Wi-Fi Password
+=======
+const char* password = "TestingCode"; // Wi-Fi Password
+>>>>>>> Stashed changes
 
 const char* State = "on";
 
 WiFiServer server(80); 
 
 
+<<<<<<< Updated upstream
+=======
+String redString = "0";
+String greenString = "0";
+String blueString = "0";
+int pos1 = 0;
+int pos2 = 0;
+int pos3 = 0;
+int pos4 = 0;
 
+// Variable to store the HTTP req  uest
+String header;
+
+// Setting PWM bit resolution
+const int resolution = 256;
+
+// Current time
+unsigned long currentTime = millis();
+// Previous time
+unsigned long previousTime = 0; 
+// Define timeout time in milliseconds (example: 2000ms = 2s)
+const long timeoutTime = 5000;
+>>>>>>> Stashed changes
 
 void setup()
-
 {
   // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
   // Any other board, you can remove this part (but no harm leaving it):
